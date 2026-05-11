@@ -1,50 +1,81 @@
-# 🌿 Proyecto Inventario Forestal
+# Inventario Forestal
 
-Sistema de registro y gestión de inventario forestal desarrollado en Python con interfaz interactiva en Google Colab.
+Proyecto desarrollado en Python y Google Colab para registrar información de fauna y flora mediante una interfaz interactiva usando `ipywidgets`.
 
-## 👥 Autores
+## Integrantes
+- Albert Yesid Rey Contreras — 01240372016
+- Diego Fernando Rojas Arce — 01240372034
 
-- **Albert Yesid Rey Contreras** — 01240372016  
-- **Diego Fernando Rojas Arce** — 01240372034
+## Descripción
+El programa permite gestionar un inventario forestal básico donde se pueden registrar animales y plantas/árboles, visualizar los datos almacenados y eliminar registros según el código ID.
 
-## 📋 Descripción
+La interfaz funciona con botones y formularios interactivos dentro de Google Colab o Jupyter Notebook.
 
-Esta aplicación permite registrar información de campo sobre fauna y flora en diferentes regiones naturales de Colombia, facilitando el trabajo de brigadas de inventario forestal.
+## Funciones principales
 
-## ✨ Funcionalidades
+### Registro de fauna
+Permite guardar:
+- Número de brigada
+- Conglomerado
+- Código ID
+- Nombre común
+- Nombre científico
+- Cantidad
+- Tipo de animal
 
-- 🐾 **Registro de Fauna:** captura datos de animales por brigada, conglomerado, tipo de especie y cantidad.
-- 🌱 **Registro de Flora:** captura datos de plantas y árboles, incluyendo tipo de árbol y uso (medicinal, maderable, etc.).
-- 📊 Almacenamiento de datos en listas para exportación posterior.
-- 🖱️ Interfaz visual con widgets interactivos directamente en el notebook.
+### Registro de flora
+Permite guardar:
+- Número de brigada
+- Conglomerado
+- Código ID
+- Nombre común
+- Nombre científico
+- Cantidad
+- Tipo de árbol
+- Propiedades
 
-## 🗺️ Regiones cubiertas
+### Mostrar datos
+Visualiza los registros guardados de fauna y flora en tablas usando `pandas`.
 
-- Caribe
-- Andina
-- Pacífica
-- Orinoquía
-- Amazonas
+### Eliminar registros
+Permite borrar registros mediante el código ID.
 
-## 🛠️ Tecnologías utilizadas
+### Editar registros
+Incluye una función de búsqueda por ID para localizar registros.
 
-- Python 3
-- [ipywidgets](https://ipywidgets.readthedocs.io/) — interfaz interactiva
-- [pandas](https://pandas.pydata.org/) — manejo de datos
-- Google Colab — entorno de ejecución
+---
 
-## 🚀 Cómo ejecutar
+## Tecnologías usadas
+- Python
+- Google Colab
+- ipywidgets
+- pandas
 
-1. Abre el archivo en [Google Colab](https://colab.research.google.com/)
-2. Ejecuta todas las celdas
-3. Usa los botones **FAUNA** y **FLORA** para registrar especies
-4. Completa todos los campos y presiona **Guardar**
+## Librerías utilizadas
 
-## 📁 Estructura del proyecto
-
+```python
+import ipywidgets as wd
+from IPython.display import display
+import pandas as pd
+from google.colab import files
 ```
-Proyecto-Inventario-Forestal/
-│
-├── avance_1.py       # Código principal del sistema
-└── README.md         # Documentación del proyecto
-```
+
+## Cómo ejecutar el proyecto
+
+1. Abrir el archivo en Google Colab o Jupyter Notebook.
+2. Ejecutar todas las celdas.
+3. Usar los botones interactivos:
+   - FAUNA
+   - FLORA
+   - MOSTRAR DATOS
+   - ELIMINAR
+   - EDITAR
+
+## Estructura general del programa
+- Listas para almacenar datos de fauna y flora.
+- Formularios interactivos con `ipywidgets`.
+- Uso de `pandas.DataFrame` para mostrar la información.
+- Validaciones básicas para evitar campos vacíos.
+
+## Objetivo del proyecto
+Facilitar el registro y organización de información forestal mediante una interfaz sencilla e interactiva.
